@@ -1,7 +1,26 @@
-####################################
-# ---------- basic ENVs ---------- #
-####################################
+###############################################################################
+# basic ENVs                                                                  #
+###############################################################################
+export OS=$(uname)
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DOWNLOAD_DIR="$HOME/downloads"
+export XDG_DESKTOP_DIR="$HOME/desktop"
+
+export HISTCONTROL=ignoredups:ignorespace
+export HISTSIZE=100000
+export HISTFILESIZE=200000
+export SAVEHIST=$HISTSIZE
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+
+export TERM=xterm-256color
+export COLUMNS=80
+
 export DOTFILES=$HOME/dotfiles
 
 # Preferred editor for local and remote sessions
@@ -11,9 +30,9 @@ else
     export EDITOR='nvim'
 fi
 
-#################################
-# ---------- OhMyZSH ---------- #
-#################################
+###############################################################################
+# OhMyZSH                                                                     #
+###############################################################################
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -29,9 +48,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 
-#################################
-# ---------- aliases ---------- #
-#################################
+###############################################################################
+# aliases                                                                     #
+###############################################################################
 alias ohmyzsh="code $DOTFILES/.zshrc"
 
 # pacman

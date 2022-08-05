@@ -11,6 +11,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_DESKTOP_DIR="$HOME/desktop"
 
+# keyboard config
+export XKB_DEFAULT_LAYOUT="us"
+export XKB_DEFAULT_VARIANT="intl"
+
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=100000
 export HISTFILESIZE=200000

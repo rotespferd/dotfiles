@@ -17,7 +17,10 @@ include $HOME/dotfiles/sway/output
 include $HOME/dotfiles/sway/layout
 
 
-
+# input
+input * {
+    xkb_layout "us(intl)"
+}
 
 
 

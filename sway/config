@@ -14,9 +14,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 include $HOME/dotfiles/sway/local
 
 include $HOME/dotfiles/sway/layout
-
-
-###  Input configuration
+include $HOME/dotfiles/sway/windows
 
 
 ### Idle configuration

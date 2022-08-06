@@ -15,7 +15,7 @@ include $HOME/dotfiles/sway/local
 
 include $HOME/dotfiles/sway/layout
 include $HOME/dotfiles/sway/windows
-
+include $HOME/dotfiles/sway/services
 
 ### Idle configuration
 exec swayidle -w \

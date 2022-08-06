@@ -6,6 +6,8 @@ set $down j
 set $up k
 set $right l
 
+font pango: Fira 10
+
 ### Application config
 set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --

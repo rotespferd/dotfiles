@@ -63,3 +63,7 @@ alias ohmyzsh="code $DOTFILES/.zshrc"
 # pacman
 alias pac="pacman"
 alias spac="sudo pacman"
+alias pacs="pacman -sS"
+alias paci="sudo pacman -yS"
+alias pacr="sudo pacman -R"
+alias pacu="sudo pacman -Syu"

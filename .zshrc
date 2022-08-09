@@ -8,6 +8,7 @@ export LC_ALL=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="/home/marian/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_DESKTOP_DIR="$HOME/desktop"
 
@@ -26,6 +27,8 @@ export TERM=xterm-256color
 export COLUMNS=80
 
 export DOTFILES=$HOME/dotfiles
+
+export PATH="/var/lib/flatpak/exports/bin:$PATH"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

@@ -1,0 +1,7 @@
+### Status Bar:
+
+bar {
+  id mainbar
+  output DP-3
+  swaybar_command waybar
+}

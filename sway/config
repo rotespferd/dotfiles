@@ -18,6 +18,7 @@ include $HOME/dotfiles/sway/local
 include $HOME/dotfiles/sway/layout
 include $HOME/dotfiles/sway/windows
 include $HOME/dotfiles/sway/services
+include $HOME/dotfiles/sway/bars
 
 ### Idle configuration
 exec swayidle -w \
@@ -162,23 +163,5 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*

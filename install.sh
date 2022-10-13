@@ -1,3 +1,4 @@
+#!/bin/zsh
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
 

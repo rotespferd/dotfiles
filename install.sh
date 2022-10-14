@@ -1,5 +1,6 @@
 #!/bin/zsh
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 source $HOME/.zshrc
 
 ln -s $DOTFILES/sway $XDG_CONFIG_HOME/sway

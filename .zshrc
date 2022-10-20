@@ -72,6 +72,11 @@ alias ohmyzsh="code $DOTFILES/.zshrc"
 # tools
 alias cat="batcat"
 
+# ls
+alias ls="exa -F --color always --icons"
+alias lsa="ls -l -a"
+alias ll="ls -l"
+
 # pacman
 alias pac="pacman"
 alias spac="sudo pacman"

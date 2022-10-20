@@ -69,6 +69,9 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 alias ohmyzsh="code $DOTFILES/.zshrc"
 
+# tools
+alias cat="batcat"
+
 # pacman
 alias pac="pacman"
 alias spac="sudo pacman"

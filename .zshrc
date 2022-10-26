@@ -84,3 +84,8 @@ alias pacs="pacman -sS"
 alias paci="sudo pacman -yS"
 alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
+
+# pnpm
+export PNPM_HOME="/home/marian/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

@@ -70,8 +70,11 @@ source $ZSH/oh-my-zsh.sh
 alias ohmyzsh="code $DOTFILES/.zshrc"
 
 # tools
-alias cat="batcat"
-
+if [[ `uname` == "Darwin" ]]; then
+	alias cat="batcat"
+elif [[ `uname` == "Linux" ]]; then
+	alias cat="bat"
+fi
 # ls
 alias ls="exa -F --color always --icons"
 alias lsa="ls -l -a"

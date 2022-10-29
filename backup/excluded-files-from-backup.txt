@@ -1,0 +1,2 @@
+/home/marian/Downloads
+/home/marian/.cache

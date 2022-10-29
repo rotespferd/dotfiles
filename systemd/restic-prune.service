@@ -1,0 +1,6 @@
+[Unit]
+Description=Restic backup service (data pruning)
+[Service]
+Type=oneshot
+ExecStart=restic forget --keep-hourly 24 --keep-daily 14 --keep-weekly 6 --keep-monthly 12 --keep-yearly 10 --prune
+EnvironmentFile=%h/dotfiles/backup/restic-backup.conf

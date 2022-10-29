@@ -8,3 +8,5 @@ ln -s $DOTFILES/swaylock $XDG_CONFIG_HOME/swaylock
 ln -s $DOTFILES/dunst $XDG_CONFIG_HOME/dunst
 ln -s $DOTFILES/alacritty $XDG_CONFIG_HOME/alacritty
 ln -s $DOTFILES/waybar $XDG_CONFIG_HOME/waybar
+
+ln -s $DOTFILES/systemd $XDG_CONFIG_HOME/systemd/user

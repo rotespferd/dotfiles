@@ -75,6 +75,7 @@ if [[ `uname` == "Darwin" ]]; then
 elif [[ `uname` == "Linux" ]]; then
 	alias cat="bat"
 fi
+
 # ls
 alias ls="exa -F --color always --icons"
 alias lsa="ls -l -a"
@@ -88,7 +89,10 @@ alias paci="sudo pacman -yS"
 alias pacr="sudo pacman -R"
 alias pacu="sudo pacman -Syu"
 
-# pnpm
+# Node.js
 export PNPM_HOME="/home/marian/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+
+# Java
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"

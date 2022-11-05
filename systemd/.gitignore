@@ -1,1 +1,3 @@
 timers.target.wants
+restic-backup*.service
+restic-backup*.timer

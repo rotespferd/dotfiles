@@ -1,0 +1,10 @@
+{
+    "telemetry.telemetryLevel": "off",
+    
+    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "bootstrap-product-icons",
+    
+    "editor.fontFamily": "'Fira Code', 'monospace', monospace",
+    "editor.fontLigatures": true
+}

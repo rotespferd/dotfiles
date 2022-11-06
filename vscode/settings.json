@@ -6,5 +6,7 @@
     "workbench.productIconTheme": "bootstrap-product-icons",
     
     "editor.fontFamily": "'Fira Code', 'monospace', monospace",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "git.autofetch": true,
+    "editor.wordWrap": "on"
 }

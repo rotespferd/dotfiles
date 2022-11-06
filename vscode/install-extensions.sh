@@ -4,6 +4,7 @@
 pkglist=(
 ms-python.python
 oderwat.indent-rainbow
+2gua.rainbow-brackets
 astro-build.astro-vscode
 coolbear.systemd-unit-file
 Equinusocio.vsc-community-material-theme

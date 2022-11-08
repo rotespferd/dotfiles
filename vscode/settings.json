@@ -8,5 +8,6 @@
     "editor.fontFamily": "'Fira Code', 'monospace', monospace",
     "editor.fontLigatures": true,
     "git.autofetch": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.inlineSuggest.enabled": true
 }

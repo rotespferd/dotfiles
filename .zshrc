@@ -19,6 +19,9 @@ export XDG_DATA_DIRS="/home/marian/.local/share/flatpak/exports/share:/var/lib/f
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_DESKTOP_DIR="$HOME/desktop"
 
+# load ENVs which vary betweeen machines
+source $HOME/dotfiles/local.zsh
+
 # keyboard config
 export XKB_DEFAULT_LAYOUT="us"
 export XKB_DEFAULT_VARIANT="intl"

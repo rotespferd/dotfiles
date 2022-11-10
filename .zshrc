@@ -36,6 +36,7 @@ export COLUMNS=80
 export DOTFILES=$HOME/dotfiles
 
 export PATH="/var/lib/flatpak/exports/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

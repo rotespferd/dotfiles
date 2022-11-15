@@ -76,6 +76,8 @@ alias ohmyzsh="code $DOTFILES/.zshrc"
 # tools
 if [[ `uname` == "Darwin" ]]; then
 	alias cat="batcat"
+elif [[ `awk -F= '/^ID=/{print $2}' /etc/os-release` == "ubuntu" ]]; then
+	alias cat="batcat"
 elif [[ `uname` == "Linux" ]]; then
 	alias cat="bat"
 fi

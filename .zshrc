@@ -102,3 +102,7 @@ export PATH="$PNPM_HOME:$PATH"
 # Java
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+# PHP
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

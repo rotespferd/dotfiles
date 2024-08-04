@@ -2,8 +2,8 @@
 size = 11.0
 
 [font.normal]
-family = "MonaspiceArNerdFontMono"
+family = "FiraMonoNerdFont"
 style = "Regular"
 
 [font.bold]
-family = "MonaspiceAr Nerd Font"
+family = "FiraMonoNerdFont"

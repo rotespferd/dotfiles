@@ -11,5 +11,18 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "battery"
     ],
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 25,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25,
+        "tooltip-format": "{timeTo}"
+    }
 }

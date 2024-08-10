@@ -13,7 +13,8 @@
     "modules-right": [
         "memory",
         "cpu",
-        "battery"
+        "battery",
+        "clock"
     ],
 
 
@@ -36,5 +37,11 @@
         "format-icons": ["", "", "", "", ""],
         "max-length": 25,
         "tooltip-format": "{timeTo}"
+    },
+    "clock": {
+        "interval": 60,
+        "tooltip": true,
+        "format": "{:%H.%M} ",
+        "tooltip-format": "{:%A, %d.%m.%Y}"
     }
 }

@@ -33,6 +33,18 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
+alias ls="eza"
+alias ll="eza --long --icons=always"
+alias lsa="eza --long --all --icons=always"
+
+alias cat="bat"
+
+###############################################################################
+# PATH                                                                        #
+###############################################################################
+export PATH="$HOME/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

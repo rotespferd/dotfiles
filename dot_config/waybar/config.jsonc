@@ -4,44 +4,58 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-        "hyprland/window"
-    ],
-    "modules-right": [
-        "memory",
-        "cpu",
-        "battery",
-        "clock"
-    ],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["memory", "cpu", "battery", "pulseaudio", "clock"],
 
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - kitty": "> [$1]",
+            "(.*) - alacritty": "> [$1]",
+            "(.*) - zsh": "> [$1]",
+            "(.*) - bash": "> [$1]",
+        },
+        "separate-outputs": true,
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": [""],
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"],
+    },
 
     "memory": {
         "interval": 10,
-        "format": "{used:0.1f}G "
+        "format": "   {used:0.2f}G",
     },
     "cpu": {
         "interval": 10,
-        "format": "{usage}% ",
-        "max-length": 10
+        "format": "   {usage}%",
+        "max-length": 10,
     },
     "battery": {
         "interval": 60,
         "states": {
             "warning": 25,
-            "critical": 15
+            "critical": 15,
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "max-length": 25,
-        "tooltip-format": "{timeTo}"
+        "tooltip-format": "{timeTo}",
     },
     "clock": {
         "interval": 60,
         "tooltip": true,
-        "format": "{:%H:%M} ",
-        "tooltip-format": "{:%A, %d.%m.%Y}"
-    }
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A, %d.%m.%Y}",
+    },
 }

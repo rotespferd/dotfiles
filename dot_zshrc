@@ -47,7 +47,7 @@ alias play='_y(){ mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*";}; _y'
 # PATH                                                                        #
 ###############################################################################
 export PATH="$HOME/bin:$PATH"
-export PATH="/home/marian/.local/bin"
+export PATH="/home/marian/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

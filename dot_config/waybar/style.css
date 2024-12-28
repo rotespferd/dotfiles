@@ -4,15 +4,15 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: FontAwesome, San Francisco;
+    font-family: FontAwesome, Monaspace Krypton;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(225, 225, 225, 0.95);
+    background: rgba(25, 25, 25, 0.95);
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: black;
+    color: white;
 }
 
 /********************************************/
@@ -32,9 +32,8 @@ tooltip label {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: black;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+    color: #00ff1a;
+    border: 1px solid #00ff1a;
 }
 
 #workspaces button:hover {
@@ -43,18 +42,16 @@ tooltip label {
     background: none; /* Remove predefined background color (white) */
     transition: none; /* Disable predefined animations */
 
-    border-top: 3px solid #81a1c1;
-    border-bottom: 3px solid #81a1c1;
+    border-top: 3px solid #00ff1a;
+    border-bottom: 3px solid #00ff1a;
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: #00ff1a;
+    color: #333333;
 }
 
 #workspaces button.active {
-    border-top: 3px solid #888888;
-    border-bottom: 3px solid #888888;
 }
 
 #workspaces button.urgent {
@@ -80,15 +77,13 @@ tooltip label {
 
 #battery {
     /*background-color: #ffffff;*/
-    color: black;
+  background-color: transparent;
 }
 
 #battery.charging {
-    color: white;
-    background-color: #26A65B;
+  color: #00ff1a;
 }
 
 #battery.warning:not(.charging) {
     /*background: #bf616a;*/
-    color: white;
 }

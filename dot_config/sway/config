@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -23,14 +23,17 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 font pango:FiraMonoNF Regular 11
 
+# Run programs
+exec waybar
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/marian/Pictures/wallpaper.webp fill
+output * bg /home/marian/Pictures/wallpaper.jpg fill
 
 output eDP-1 resolution 2256x1504 position 0,0
-output eDP-1 scale 1.25
+output eDP-1 scale 1.5
 #
 # Example configuration:
 #
@@ -209,28 +212,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-
-#
 # Media keys
 #
+#bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && notify-send "Audio Volume" "Current volume: $(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2}' | sed 's/\[MUTED\]//' | awk '{print int($1*100)}')%" -i "audio-volume-high" -t 5000 --replace-id=9702
+#bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && notify-send "Audio Volume" "Current volume: $(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2}' | sed 's/\[MUTED\]//' | awk '{print int($1*100)}')%" -i "audio-volume-high" -t 5000 --replace-id=9702
+#bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && wpctl get-volume @DEFAULT_SINK@ | grep -q "\[MUTED\]" && notify-send "Audio Status" "Muted" -i "audio-volume-muted" -t 5000 --replace-id=9701 || notify-send "Audio Status" "Unmuted" -i "audio-volume-high" -t 5000 --replace-id=9701
+#bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+#bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+ && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
+#bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%- && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86MonBrightnessUp exec brightnessctl s 10%+ && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev

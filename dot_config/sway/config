@@ -25,6 +25,7 @@ font pango:FiraMonoNF Regular 11
 
 # Run programs
 exec waybar
+exec dunst
 
 ### Output configuration
 #

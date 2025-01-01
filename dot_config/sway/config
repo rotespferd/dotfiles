@@ -99,6 +99,8 @@ input "2362:628:PIXA3854:00_093A:0274_Touchpad" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    
+    bindsym $mod+Alt+L exec swaylock -f -c 000000
 #
 # Moving around:
 #
@@ -221,7 +223,7 @@ bindsym $mod+r mode "resize"
 #bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 #bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+ && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
 #bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%- && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%- && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+ && notify-send "Current Brightness" "$(brightnessctl i | grep -oP '\d+(?=%)')%" --replace-id=9801 -t 5000
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next

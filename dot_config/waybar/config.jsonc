@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["memory", "cpu", "battery", "pulseaudio", "clock"],
+    "modules-right": ["network", "memory", "cpu", "battery", "pulseaudio", "clock"],
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -18,6 +18,12 @@
         "scroll-step": 1,
         "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"],
+    },
+
+
+    "network": {
+        "interval": 5,
+        "format": " {bandwidthUpBytes}  {bandwidthDownBytes}"
     },
 
     "memory": {

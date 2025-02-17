@@ -77,3 +77,13 @@ wtf:
         width: 2
       refreshInterval: 60
       title: "BTRFS Snapshots"
+    docker:
+      type: docker
+      enabled: true
+      labelColor: lightblue
+      position:
+        top: 3
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 1s

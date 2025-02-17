@@ -87,3 +87,16 @@ wtf:
         height: 1
         width: 1
       refreshInterval: 1s
+    prettyweather:
+      enabled: true
+      city: "paderborn"
+      position:
+          top: 4
+          left: 0
+          height: 1
+          width: 1
+      refreshInterval: 5m
+      unit: "m"
+      view: "0"
+      language: "en"
+      title: "Weather"

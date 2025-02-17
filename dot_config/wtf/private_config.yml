@@ -5,46 +5,33 @@ wtf:
       focused: orange
       normal: gray
   grid:
-    columns: [32, 32, 32, 32, 90]
-    rows: [10, 10, 10, 4, 4, 90]
+    columns: [35, 50, 50]
+    rows: [10, 10, 10]
   refreshInterval: 1
   mods:
-    clocks_a:
+    clocks:
       colors:
         rows:
           even: "lightblue"
           odd: "white"
       enabled: true
       locations:
-        Vancouver: "America/Vancouver"
-        Toronto: "America/Toronto"
+        - Auckland: "Pacific/Auckland"
+        - Tokyo: "Asia/Tokyo"
+        - Beijing: "Asia/Shanghai"
+        - Kolkata: "Asia/Kolkata"
+        - Berlin: "Europe/Berlin"
+        - UTC: "Etc/UTC"
+        - New York: "America/New York"
+        - Los Angeles: "America/Los_Angeles"
       position:
         top: 0
-        left: 1
+        left: 0
         height: 1
         width: 1
       refreshInterval: 15
-      sort: "alphabetical"
-      title: "Clocks A"
-      type: "clocks"
-    clocks_b:
-      colors:
-        rows:
-          even: "lightblue"
-          odd: "white"
-      enabled: true
-      locations:
-        Paris: "Europe/Paris"
-        Barcelona: "Europe/Madrid"
-        Dubai: "Asia/Dubai"
-      position:
-        top: 0
-        left: 2
-        height: 1
-        width: 1
-      refreshInterval: 15
-      sort: "alphabetical"
-      title: "Clocks B"
+      sort: "natural"
+      title: "Clocks"
       type: "clocks"
     feedreader:
       enabled: true
@@ -52,7 +39,7 @@ wtf:
       - http://feeds.bbci.co.uk/news/rss.xml
       feedLimit: 10
       position:
-        top: 1
+        top: 0
         left: 1
         width: 2
         height: 1
@@ -63,8 +50,8 @@ wtf:
         value: "white"
       enabled: true
       position:
-        top: 2
-        left: 1
+        top: 1
+        left: 0
         height: 1
         width: 1
       refreshInterval: 150
@@ -72,30 +59,8 @@ wtf:
       enabled: true
       position:
         top: 2
-        left: 2
+        left: 0
         height: 1
         width: 1
       refreshInterval: 15
       title: "⚡️"
-    textfile:
-      enabled: true
-      filePath: "~/.config/wtf/config.yml"
-      format: true
-      position:
-        top: 0
-        left: 0
-        height: 4
-        width: 1
-      refreshInterval: 30
-      wrapText: false
-    uptime:
-      args: [""]
-      cmd: "uptime"
-      enabled: true
-      position:
-        top: 3
-        left: 1
-        height: 1
-        width: 2
-      refreshInterval: 30
-      type: cmdrunner

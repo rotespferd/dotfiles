@@ -5,7 +5,7 @@ wtf:
       focused: orange
       normal: gray
   grid:
-    columns: [35, 50, 50]
+    columns: [40, 60, 60]
     rows: [10, 10, 10]
   refreshInterval: 1
   mods:
@@ -64,3 +64,15 @@ wtf:
         width: 1
       refreshInterval: 15
       title: "⚡️"
+    cmdrunner:
+      cmd: "snapper"
+      args: ["-c", "root", "list"]
+      tail: true
+      enabled: true
+      position:
+        top: 1
+        left: 1
+        height: 1
+        width: 2
+      refreshInterval: 60
+      title: "BTRFS Snapshots"

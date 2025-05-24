@@ -1,0 +1,8 @@
+window#osd {
+	border-radius: 15px;
+	padding: 5px 5px !important;
+}
+
+window#osd #container {
+	margin: 5px;
+}

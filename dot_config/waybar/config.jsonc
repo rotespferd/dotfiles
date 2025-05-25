@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "memory", "cpu", "battery", "pulseaudio", "clock"],
+    "modules-right": ["network", "memory", "cpu", "battery", "pulseaudio", "tray", "clock"],
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -45,6 +45,10 @@
         "format-icons": ["", "", "", "", ""],
         "max-length": 25,
         "tooltip-format": "{timeTo}",
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
     },
     "clock": {
         "interval": 60,

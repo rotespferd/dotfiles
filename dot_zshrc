@@ -43,6 +43,10 @@ alias cat="bat"
 
 alias play='_y(){ mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*";}; _y'
 
+alias mountgames='sudo systemctl start mnt-games.mount'
+# z config
+eval "$(zoxide init zsh)"
+
 ###############################################################################
 # PATH                                                                        #
 ###############################################################################
